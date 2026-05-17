@@ -16,7 +16,7 @@ numpy==1.26.4
 scikit-learn==1.4.2
 torch==2.3.0
 stable-baselines3==2.3.0
-freqtrade==2024.4
+freqtrade==2026.4
 
 # AI / LLM
 openai==1.30.1
