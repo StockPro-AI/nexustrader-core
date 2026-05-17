@@ -1,10 +1,10 @@
 # NexusTrader Dashboard Dependencies
 
 # Dashboard
-streamlit==1.35.0
+streamlit==1.54.0
 
 # HTTP Client
-requests==2.31.0
+requests==2.33.0
 
 # Data Visualization
 plotly==5.22.0
@@ -12,7 +12,7 @@ pandas==2.2.2
 numpy==1.26.4
 
 # Config
-python-dotenv==1.0.1
+python-dotenv==1.2.2
 
 # Utils
 pytz==2024.1
