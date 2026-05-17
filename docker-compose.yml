@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  orchestrator:
+    build: ./orchestrator
+    container_name: nexustrader_orchestrator
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    networks:
+      - nexustrader
+
+  dashboard:
+    build: ./dashboard
+    container_name: nexustrader_dashboard
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    depends_on:
+      - orchestrator
+    networks:
+      - nexustrader
+
+  freqtrade:
+    image: freqtradeorg/freqtrade:stable
+    container_name: nexustrader_freqtrade
+    restart: unless-stopped
+    volumes:
+      - ./freqtrade/config:/freqtrade/user_data
+    command: trade --config /freqtrade/user_data/config.json --strategy NexusStrategy
+    env_file:
+      - .env
+    networks:
+      - nexustrader
+
+networks:
+  nexustrader:
+    driver: bridge
+
+volumes:
+  data:
