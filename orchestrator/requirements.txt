@@ -1,0 +1,48 @@
+# NexusTrader Orchestrator Dependencies
+
+# Web Framework
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+
+# HTTP Client
+httpx==0.27.0
+requests==2.31.0
+
+# Data
+pandas==2.2.2
+numpy==1.26.4
+
+# ML / DRL
+scikit-learn==1.4.2
+torch==2.3.0
+stable-baselines3==2.3.0
+freqtrade==2024.4
+
+# AI / LLM
+openai==1.30.1
+anthropics==0.26.0
+google-generativeai==0.5.4
+
+# Async / Queue
+aiohttp==3.9.5
+celery==5.4.0
+redis==5.0.4
+
+# Scheduling
+apscheduler==3.10.4
+
+# Database
+sqlalchemy==2.0.30
+alembic==1.13.1
+
+# Config
+python-dotenv==1.0.1
+pydantic==2.7.1
+pydantic-settings==2.2.1
+
+# Logging
+loguru==0.7.2
+
+# Utils
+python-dateutil==2.9.0
+pytz==2024.1
